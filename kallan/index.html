@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="description" content="Kallan Schoonover — Reseller, Moving Mountains Co-Founder">
+<title>Kallan Schoonover — Moving Mountains</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a14;
+    --card: #12121f;
+    --border: #2a2a4a;
+    --gold: #f0c040;
+    --purple: #9b59b6;
+    --text: #e0e0f0;
+    --muted: #8888aa;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px 64px;
+  }
+  .profile { text-align: center; margin-bottom: 28px; }
+  .avatar-wrap {
+    width: 110px; height: 110px; border-radius: 50%;
+    border: 3px solid var(--purple);
+    overflow: hidden; margin: 0 auto 14px;
+    box-shadow: 0 0 24px rgba(155,89,182,0.35);
+  }
+  .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .profile-name { font-size: 1.5rem; font-weight: 800; color: var(--text); letter-spacing: 1px; }
+  .profile-handle { font-size: 0.85rem; color: var(--purple); margin-top: 2px; }
+  .profile-bio {
+    font-size: 0.88rem; color: var(--muted); margin-top: 10px;
+    max-width: 340px; margin-left: auto; margin-right: auto; line-height: 1.55;
+  }
+  .profile-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+  .tag { font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--muted); }
+  .tag.purple { border-color: var(--purple); color: var(--purple); }
+  .tag.gold { border-color: var(--gold); color: var(--gold); }
+
+  .stats-bar {
+    display: flex; gap: 20px; justify-content: center;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 24px; margin-bottom: 28px;
+    max-width: 420px; width: 100%;
+  }
+  .stat { text-align: center; }
+  .stat-val { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+  .stat-lbl { font-size: 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+  .links { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 420px; }
+  .section-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin: 8px 0 4px; padding-left: 4px; }
+  .link-btn {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 18px;
+    text-decoration: none; color: var(--text);
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+  .link-btn:hover { border-color: var(--gold); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(240,192,64,0.12); }
+  .link-btn.featured { border-color: var(--purple); }
+  .link-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; background: #1a1a2e; }
+  .link-text { flex: 1; }
+  .link-title { font-size: 0.92rem; font-weight: 700; }
+  .link-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+  .link-arrow { color: var(--muted); font-size: 0.9rem; }
+
+  .footer { margin-top: 48px; text-align: center; }
+  .footer-brand { font-size: 0.8rem; color: var(--muted); }
+  .footer-brand a { color: var(--gold); text-decoration: none; }
+  .footer-copy { font-size: 0.65rem; color: #444; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="profile">
+  <div class="avatar-wrap">
+    <img src="https://jamescschoonover.github.io/Game-Of-Life/images/kallan_base.jpg" alt="Kallan Schoonover">
+  </div>
+  <div class="profile-name">Kallan Schoonover</div>
+  <div class="profile-handle">@movingmountains</div>
+  <div class="profile-bio">
+    Reseller · Photo artist · Co-Founder of Moving Mountains.<br>
+    Turning thrift finds into income and building something real with my husband.
+  </div>
+  <div class="profile-tags">
+    <span class="tag purple">🥊 The Kickboxer</span>
+    <span class="tag gold">🏔️ Moving Mountains</span>
+    <span class="tag">📸 Reseller</span>
+    <span class="tag">✨ Lv.10 GOAT</span>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-val" id="statLevel">—</div><div class="stat-lbl">Level</div></div>
+  <div class="stat"><div class="stat-val" id="statXP">—</div><div class="stat-lbl">XP</div></div>
+  <div class="stat"><div class="stat-val" id="statStreak">—</div><div class="stat-lbl">Streak</div></div>
+  <div class="stat"><div class="stat-val" id="statGold">—</div><div class="stat-lbl">Gold</div></div>
+</div>
+
+<div class="links">
+
+  <div class="section-label">🏔️ Moving Mountains</div>
+  <a href="https://movingmountains.community" class="link-btn featured">
+    <div class="link-icon">🏔️</div>
+    <div class="link-text">
+      <div class="link-title">Moving Mountains</div>
+      <div class="link-sub">Our story, mission & business</div>
+    </div>
+    <div class="link-arrow">›</div>
+  </a>
+
+  <div class="section-label">🛒 Shop My Listings</div>
+  <a href="#" class="link-btn" id="linkEbay">
+    <div class="link-icon">🛍️</div>
+    <div class="link-text"><div class="link-title">eBay Store</div><div class="link-sub">Vintage finds, home goods, fashion</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+  <a href="#" class="link-btn" id="linkPoshmark">
+    <div class="link-icon">👗</div>
+    <div class="link-text"><div class="link-title">Poshmark Closet</div><div class="link-sub">Fashion & accessories</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+  <a href="#" class="link-btn" id="linkMercari">
+    <div class="link-icon">📦</div>
+    <div class="link-text"><div class="link-title">Mercari Shop</div><div class="link-sub">Everything ships fast</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+  <a href="#" class="link-btn" id="linkDepop">
+    <div class="link-icon">✨</div>
+    <div class="link-text"><div class="link-title">Depop</div><div class="link-sub">Unique & vintage pieces</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+  <a href="#" class="link-btn" id="linkFacebook">
+    <div class="link-icon">📍</div>
+    <div class="link-text"><div class="link-title">Facebook Marketplace</div><div class="link-sub">Local + shipped listings</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+
+  <div class="section-label">🔗 Connect</div>
+  <a href="mailto:kallan.a.schoonover@gmail.com" class="link-btn">
+    <div class="link-icon">✉️</div>
+    <div class="link-text"><div class="link-title">Email Kallan</div><div class="link-sub">Business inquiries welcome</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+  <a href="https://movingmountains.community/james" class="link-btn">
+    <div class="link-icon">⚡</div>
+    <div class="link-text"><div class="link-title">James's Page</div><div class="link-sub">My husband & co-founder</div></div>
+    <div class="link-arrow">›</div>
+  </a>
+
+</div>
+
+<div class="footer">
+  <div class="footer-brand">Part of <a href="https://movingmountains.community">🏔️ Moving Mountains</a></div>
+  <div class="footer-copy">Fighting debt. Building the business. Leveling up together.</div>
+</div>
+
+<script type="module">
+import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+const _cfg = { apiKey:"AIzaSyCTLN0v2LihL9o8Wvj9LDoyrVMNsdC4mkw", authDomain:"forge-game.firebaseapp.com", projectId:"forge-game", storageBucket:"forge-game.firebasestorage.app", messagingSenderId:"558100909348", appId:"1:558100909348:web:d9f51ec807001c4e1f37b1" };
+const app = getApps().find(a=>a.name==='links-kallan') || initializeApp(_cfg,'links-kallan');
+const db  = getFirestore(app);
+async function loadStats() {
+  try {
+    const snap = await getDoc(doc(db, 'game_state', 'kallan'));
+    if (!snap.exists()) return;
+    const d = snap.data();
+    document.getElementById('statLevel').textContent  = d.level ?? '—';
+    document.getElementById('statXP').textContent     = (d.xp ?? 0).toLocaleString();
+    document.getElementById('statStreak').textContent = d.streak ?? '—';
+    document.getElementById('statGold').textContent   = d.gold ?? '—';
+  } catch(e) {}
+}
+loadStats();
+</script>
+</body>
+</html>
