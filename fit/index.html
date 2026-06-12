@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Dumpster Fire to Fit — Watch me rise. 🔥🦅</title>
+<meta name="description" content="From dumpster fire to functional, fit & finding my purpose. Kalli's real, raw, unfiltered journey — no filters, no fake positivity. Part of the Moving Mountains family.">
+<meta property="og:title" content="Dumpster Fire to Fit">
+<meta property="og:description" content="The fire didn't kill me — it's forging me. Watch me rise. 🔥🦅">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f3ea; --paper-2:#efe6d4; --paper-3:#e7dcc4;
+    --ink:#241f1d; --ink-soft:#5c504a;
+    --ember:#e07a2f; --flame:#d9531f; --flame-deep:#b3331a;
+    --smoke:#241c18; --smoke-2:#3a2c23;
+    --evergreen:#1f4838; --dumpster:#3f7a3f; --gold:#f3b96e;
+    --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper); color:var(--ink); font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; line-height:1.04; font-weight:600; letter-spacing:-.01em}
+  .script{font-family:'Caveat',cursive; font-weight:600; line-height:1}
+  a{color:inherit; text-decoration:none}
+  img{max-width:100%; display:block}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 26px}
+  .grain{position:fixed; inset:0; z-index:9; pointer-events:none; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  /* nav */
+  nav{position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center;
+    justify-content:space-between; padding:15px 26px; transition:background .4s, box-shadow .4s, padding .4s}
+  nav.scrolled{background:rgba(36,28,24,.92); backdrop-filter:blur(10px); padding:10px 26px}
+  .back{font-size:.8rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:#fff;
+    text-shadow:0 1px 8px rgba(0,0,0,.6); opacity:.92; display:flex; align-items:center; gap:8px}
+  .back:hover{color:var(--gold)}
+  .nav-right{display:flex; align-items:center; gap:18px}
+  .nav-wordmark{font-family:'Caveat',cursive; font-weight:700; font-size:1.45rem; color:#fff;
+    text-shadow:0 2px 10px rgba(0,0,0,.5)}
+  .follow{padding:9px 18px; border-radius:40px; background:var(--flame); color:#fff!important;
+    font-weight:800; font-size:.82rem; box-shadow:0 6px 18px -6px rgba(217,83,31,.9)}
+  .follow:hover{background:var(--flame-deep)}
+  @media(max-width:720px){.nav-wordmark{display:none}}
+
+  /* hero */
+  .hero{position:relative; min-height:100svh; display:flex; align-items:center; overflow:hidden;
+    background:radial-gradient(120% 90% at 80% 10%, #6b2f12 0%, var(--smoke-2) 42%, var(--smoke) 100%)}
+  .hero::after{content:""; position:absolute; inset:0;
+    background:radial-gradient(60% 50% at 78% 38%, rgba(224,122,47,.4), transparent 70%); pointer-events:none}
+  .ember{position:absolute; bottom:-10px; width:7px; height:7px; border-radius:50%;
+    background:radial-gradient(circle,#ffd08a,#e07a2f); opacity:0; filter:blur(.4px);
+    animation:ember 6s linear infinite}
+  @keyframes ember{0%{transform:translateY(0) scale(1);opacity:0}10%{opacity:.9}
+    100%{transform:translateY(-78vh) translateX(30px) scale(.3);opacity:0}}
+  .hero-grid{position:relative; z-index:3; display:grid; grid-template-columns:1.05fr .95fr;
+    gap:46px; align-items:center; width:100%}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr; gap:30px; padding-top:90px; padding-bottom:50px}}
+  .hero .eyebrow{font-family:'Caveat',cursive; font-size:clamp(1.5rem,3.5vw,2.3rem); color:var(--gold);
+    text-shadow:0 2px 14px rgba(0,0,0,.4)}
+  .hero h1{color:#fff; font-size:clamp(2.5rem,6vw,4.4rem); text-shadow:0 4px 30px rgba(0,0,0,.5); margin:.05em 0 .2em}
+  .hero h1 em{font-style:normal; color:var(--ember); font-family:'Caveat',cursive; font-weight:700}
+  .hero p.sub{color:#f3e6d8; font-size:clamp(1.02rem,2.2vw,1.28rem); max-width:42ch; margin-bottom:1.6em;
+    font-family:'Fraunces',serif; font-style:italic; font-weight:400}
+  .hero .ctas{display:flex; gap:14px; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:9px; padding:14px 28px; border-radius:42px;
+    font-weight:800; font-size:.9rem; cursor:pointer; border:2px solid transparent;
+    transition:transform .2s, box-shadow .2s, background .2s}
+  .btn-fire{background:var(--flame); color:#fff; box-shadow:0 14px 32px -12px rgba(217,83,31,.95)}
+  .btn-fire:hover{transform:translateY(-3px); background:#e6602b}
+  .btn-ghost{background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.6); backdrop-filter:blur(2px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16); transform:translateY(-3px)}
+  .hero-photo{position:relative}
+  .hero-photo .frame{border-radius:22px; overflow:hidden; border:5px solid #fff;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,.7); transform:rotate(1.6deg); aspect-ratio:5/6; background:#000}
+  .hero-photo .frame img{width:100%; height:100%; object-fit:cover}
+  .hero-photo .tag{position:absolute; bottom:-14px; left:-12px; background:var(--dumpster); color:#fff;
+    font-family:'Caveat',cursive; font-weight:700; font-size:1.35rem; padding:6px 18px; border-radius:30px;
+    transform:rotate(-3deg); box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+
+  /* about */
+  .about{background:var(--paper); padding:90px 0 70px; position:relative}
+  .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:start}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr; gap:34px}}
+  .about .script{color:var(--flame); font-size:clamp(1.6rem,3.6vw,2.3rem)}
+  .about h2{font-size:clamp(1.9rem,4.6vw,2.9rem); margin:.05em 0 .5em}
+  .about p{color:var(--ink-soft); margin-bottom:1em; font-size:1.05rem}
+  .about p .em{color:var(--ink); font-weight:800}
+  .laugh{font-family:'Fraunces',serif; font-style:italic}
+  .pull{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.5rem,3.2vw,2.1rem);
+    color:var(--evergreen); line-height:1.18; border-left:5px solid var(--ember); padding:6px 0 6px 22px; margin:1.2em 0}
+  .about-photo{border-radius:18px; overflow:hidden; border:4px solid #fff; box-shadow:0 24px 50px -22px rgba(0,0,0,.5);
+    aspect-ratio:3/2; background:#000; position:sticky; top:90px}
+  .about-photo img{width:100%; height:100%; object-fit:cover}
+
+  /* crew / opossums */
+  .crew{background:var(--evergreen); color:#eaf3ec; text-align:center; padding:64px 0}
+  .crew .script{color:var(--gold); font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .crew h2{color:#fff; font-size:clamp(1.7rem,4vw,2.5rem); margin:.1em auto .4em; max-width:20ch}
+  .crew p{max-width:54ch; margin:0 auto; color:#cfe0d4; font-size:1.08rem}
+  .crew .poss{font-size:2rem; letter-spacing:6px; margin-top:14px}
+
+  /* promise */
+  .promise{background:linear-gradient(180deg,var(--smoke),var(--smoke-2)); color:#f3e6d8; padding:84px 0; text-align:center}
+  .promise h2{color:#fff; font-size:clamp(1.9rem,4.6vw,2.8rem); max-width:24ch; margin:0 auto .6em}
+  .promise .nos{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:1.4em 0}
+  .no{border:1px solid rgba(255,255,255,.28); border-radius:40px; padding:9px 18px; font-weight:700; font-size:.86rem; color:#ffd9bf}
+  .promise .kicker{font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:#ffd9bf; max-width:38ch; margin:0 auto}
+
+  /* follow */
+  .cta{background:var(--paper); text-align:center; padding:90px 0 60px}
+  .cta .big{font-family:'Caveat',cursive; font-weight:700; color:var(--flame); font-size:clamp(2.6rem,7vw,4.6rem); line-height:.92}
+  .cta p{color:var(--ink-soft); margin:.6em auto 1.6em; max-width:40ch}
+  .cta .btn-fire{font-size:1rem; padding:16px 34px}
+  .cta .home{display:block; margin-top:22px; font-weight:800; font-size:.84rem; color:var(--evergreen)}
+  .cta .home:hover{color:var(--flame)}
+
+  footer{background:var(--smoke); color:#b59f93; text-align:center; padding:40px 26px}
+  footer b{font-family:'Caveat',cursive; color:#fff; font-size:1.4rem}
+  footer .fine{font-size:.76rem; margin-top:10px; color:#7d6b60}
+
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1; transform:none}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}.reveal{opacity:1!important; transform:none!important}}
+</style>
+<link rel="icon" type="image/png" href="/assets/round-logo.png">
+<link rel="apple-touch-icon" href="/assets/round-logo.png">
+<meta property="og:image" content="https://movingmountains.community/assets/banner1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://movingmountains.community/assets/banner1.png">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav id="nav">
+  <a class="back" href="/">← Moving Mountains</a>
+  <div class="nav-right">
+    <span class="nav-wordmark">Dumpster Fire to Fit</span>
+    <a class="follow" href="https://www.facebook.com/share/1DqyCAfsEC/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow 🔥</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">watch me rise. 🔥🦅</div>
+      <h1>The fire didn't kill me — <em>it's forging me.</em></h1>
+      <p class="sub">From dumpster fire to functional, fit &amp; finding my purpose. My real, raw, unfiltered climb — no filters, no fake positivity.</p>
+      <div class="ctas">
+        <a class="btn btn-fire" href="https://www.facebook.com/share/1DqyCAfsEC/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow my climb →</a>
+        <a class="btn btn-ghost" href="/">The whole family ↑</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="../assets/fit/dff-opossums.jpg" alt="Kalli grinning in front of a flaming 'LIFE Company' dumpster with cheering opossums"></div>
+      <div class="tag">Dumpster Fire to Fit</div>
+    </div>
+  </div>
+  <span class="ember" style="left:12%; animation-delay:0s"></span>
+  <span class="ember" style="left:24%; animation-delay:1.4s"></span>
+  <span class="ember" style="left:40%; animation-delay:2.6s"></span>
+  <span class="ember" style="left:58%; animation-delay:.8s"></span>
+  <span class="ember" style="left:72%; animation-delay:3.4s"></span>
+  <span class="ember" style="left:86%; animation-delay:2s"></span>
+</header>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="script reveal">Hi, I'm Kalli.</div>
+      <h2 class="reveal">If you want a perfectly curated<br>fitness page… <span class="laugh">this isn't it.</span> 😂</h2>
+      <p class="reveal">For as long as I can remember, I've struggled with my weight. Not just the number on the scale, but the cycle — the yo-yo diets, the failed attempts, the <em>"I'll start Monday"</em> promises that turned into <em>"I'll start next Monday."</em></p>
+      <p class="reveal">I've had seasons of rock bottom. Moments where getting off the couch felt impossible. I've fought battles that had nothing to do with food and everything to do with survival — emotionally, mentally, and physically.</p>
+      <p class="pull reveal">But here's what I know now: the fire didn't kill me. It's forging me.</p>
+      <p class="reveal">This is my real, raw, unfiltered journey — from the dumpster fire I've been living in, to becoming a <span class="em">functional, fit woman who's finally found her purpose.</span> Just the truth of what it looks like to rebuild yourself from the ground up.</p>
+      <p class="reveal">I'm not starting from rock bottom. I'm starting from experience. And this time? <span class="em">I'm not stopping.</span></p>
+    </div>
+    <div class="about-photo reveal">
+      <img src="../assets/fit/dff-treadmill.jpg" alt="Kalli running on a treadmill beside a bonfire of burning junk food">
+    </div>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="crew">
+  <div class="wrap">
+    <div class="script reveal">every dumpster fire has survivors</div>
+    <h2 class="reveal">Meet the crew that never stays down.</h2>
+    <p class="reveal">Opossums get knocked flat, play dead, and then get right back up and keep going. Honestly? Same. Life's been one flaming "LIFE Company" dumpster — and we're the ones still grinning in front of it.</p>
+    <div class="poss reveal">🔥&nbsp;&nbsp;🗑️&nbsp;&nbsp;🐾&nbsp;&nbsp;🦅</div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="wrap">
+    <h2 class="reveal">What you'll get here.</h2>
+    <div class="nos reveal">
+      <span class="no">✕ No filters</span>
+      <span class="no">✕ No fake positivity</span>
+      <span class="no">✕ No "I'll start Monday"</span>
+    </div>
+    <p class="kicker reveal">Just the honest climb — the rock-bottom days and the small wins — from someone who's living it, not selling it.</p>
+  </div>
+</section>
+
+<!-- FOLLOW -->
+<section class="cta">
+  <div class="wrap">
+    <div class="big reveal">Watch me rise.</div>
+    <p class="reveal">Come climb with me. Cheer on the hard days, celebrate the wins, and watch a dumpster fire turn into something strong.</p>
+    <a class="btn btn-fire reveal" href="https://www.facebook.com/share/1DqyCAfsEC/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow on Facebook 🔥🦅</a>
+    <a class="home reveal" href="/">← Back to the Moving Mountains family</a>
+  </div>
+</section>
+
+<footer>
+  <b>Dumpster Fire to Fit</b>
+  <div class="fine">Kalli's climb · part of the 🏔️ Moving Mountains Community family · Watch me rise. 🔥🦅</div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
+</script>
+</body>
+</html>

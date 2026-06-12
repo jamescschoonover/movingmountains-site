@@ -3,554 +3,435 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Moving Mountains — A family reselling business built from scratch. Fighting debt, building income, leveling up together.">
-<meta property="og:title" content="Moving Mountains">
-<meta property="og:description" content="A family on a mission to fight debt, build a business, and level up together.">
-<meta property="og:image" content="https://movingmountains.community/images/og-card.jpg">
-<title>Moving Mountains — Fight Debt. Build the Business. Level Up Together.</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Moving Mountains — A family climbing its way home.</title>
+<meta name="description" content="We're James & Kalli — a husband-and-wife team reselling thrift finds to climb out of debt and into a healthier life. Three mountains, one family, one climb. Shop our closet and walk the trail with us.">
+<meta property="og:title" content="Moving Mountains Community">
+<meta property="og:description" content="A family climbing its way out — one thrift find, one workout, one step up the trail at a time.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --bg: #06060f;
-  --surface: #0d0d1a;
-  --panel: #121222;
-  --border: #1e1e38;
-  --gold: #f0c040;
-  --gold-dim: #b08820;
-  --green: #2ecc71;
-  --purple: #9b59b6;
-  --text: #e0e0f0;
-  --muted: #7070a0;
-  --max: 1100px;
-}
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+  :root{
+    --paper:#f7f3ea; --paper-2:#efe6d4; --paper-3:#e7dcc4;
+    --ink:#2b2a26; --ink-soft:#5c554a;
+    --evergreen:#1f4838; --evergreen-2:#2c5a45; --evergreen-deep:#163428;
+    --peak:#5b7894; --peak-light:#9db4c6; --peak-mist:#c3d3e0; --peak-deep:#3c5366;
+    --sky-top:#cfe0ec; --sky-warm:#f3d9b5;
+    --river:#6b7a82; --sun:#e0913f; --sun-soft:#f3b96e; --clay:#b9603f;
+    --max:1180px;
+    --shadow:0 18px 50px -24px rgba(22,52,40,.5);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif; line-height:1.05; font-weight:600; letter-spacing:-.01em}
+  .script{font-family:'Caveat',cursive; font-weight:600; line-height:1}
+  a{color:inherit; text-decoration:none}
+  img{max-width:100%; display:block}
+  section{position:relative}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 26px}
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(6,6,15,0.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 32px;
-}
-.nav-brand { font-size: 1.1rem; font-weight: 900; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
-.nav-links { display: flex; gap: 28px; }
-.nav-links a { font-size: 0.82rem; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold); }
-.nav-cta {
-  background: var(--gold); color: #06060f; font-size: 0.78rem; font-weight: 800;
-  padding: 8px 18px; border-radius: 8px; text-decoration: none; letter-spacing: 1px;
-  transition: opacity 0.2s;
-}
-.nav-cta:hover { opacity: 0.85; }
-@media (max-width: 680px) {
-  nav { padding: 12px 16px; }
-  .nav-links { display: none; }
-}
+  /* grain */
+  .grain{position:fixed; inset:0; z-index:9; pointer-events:none; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; text-align: center;
-  padding: 100px 24px 80px;
-  background: radial-gradient(ellipse at 50% 40%, #1a1040 0%, var(--bg) 70%);
-  position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0c040' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.hero-eyebrow {
-  font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 20px; opacity: 0.8;
-}
-.hero-logo { font-size: 5rem; margin-bottom: 12px; filter: drop-shadow(0 0 40px rgba(240,192,64,0.5)); }
-.hero-title {
-  font-size: clamp(2.4rem, 8vw, 4.5rem); font-weight: 900;
-  color: var(--gold); letter-spacing: 4px; text-transform: uppercase;
-  text-shadow: 0 0 60px rgba(240,192,64,0.25); line-height: 1.1;
-  margin-bottom: 20px;
-}
-.hero-tagline {
-  font-size: clamp(1rem, 3vw, 1.4rem); color: var(--text);
-  max-width: 580px; line-height: 1.6; opacity: 0.85; margin-bottom: 14px;
-}
-.hero-sub { font-size: 0.88rem; color: var(--muted); max-width: 480px; line-height: 1.7; margin-bottom: 40px; }
-.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-.btn-primary {
-  background: var(--gold); color: #06060f; font-weight: 800; font-size: 0.9rem;
-  padding: 14px 32px; border-radius: 10px; text-decoration: none; letter-spacing: 1px;
-  transition: transform 0.15s, box-shadow 0.2s;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(240,192,64,0.3); }
-.btn-secondary {
-  background: transparent; color: var(--text); font-size: 0.9rem;
-  padding: 14px 32px; border-radius: 10px; text-decoration: none;
-  border: 1px solid var(--border); transition: border-color 0.2s;
-}
-.btn-secondary:hover { border-color: var(--gold); }
-.hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; }
+  /* ---------- NAV ---------- */
+  nav{position:fixed; top:0; left:0; right:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 26px; transition:background .4s ease, box-shadow .4s ease, padding .4s ease;}
+  nav.scrolled{background:rgba(247,243,234,.92); backdrop-filter:blur(10px);
+    box-shadow:0 1px 0 rgba(43,42,38,.08); padding:10px 26px;}
+  .brand{display:flex; align-items:center; gap:11px}
+  .brand img{width:42px; height:42px; filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+  .brand b{font-family:'Caveat',cursive; font-size:1.6rem; color:#fff; font-weight:700;
+    text-shadow:0 2px 10px rgba(22,52,40,.55); transition:color .4s, text-shadow .4s}
+  nav.scrolled .brand b{color:var(--evergreen); text-shadow:none}
+  .nav-links{display:flex; gap:30px; align-items:center}
+  .nav-links a{font-size:.82rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color:#fff; text-shadow:0 1px 8px rgba(22,52,40,.6); transition:color .4s, text-shadow .4s; opacity:.95}
+  .nav-links a:hover{color:var(--sun-soft)}
+  nav.scrolled .nav-links a{color:var(--ink-soft); text-shadow:none}
+  nav.scrolled .nav-links a:hover{color:var(--clay)}
+  .nav-cta{padding:9px 18px; border-radius:40px; background:var(--sun);
+    color:#fff!important; text-shadow:none!important; box-shadow:0 6px 18px -6px rgba(224,145,63,.8)}
+  .nav-links .nav-cta:hover{background:var(--clay)}
+  /* hamburger menu */
+  .nav-toggle{display:none; background:none; border:0; cursor:pointer; width:46px; height:46px; flex-direction:column; justify-content:center; align-items:center; gap:5px; z-index:30}
+  .nav-toggle span{display:block; width:23px; height:2.5px; border-radius:2px; background:#fff; box-shadow:0 1px 6px rgba(22,52,40,.5); transition:transform .3s ease, opacity .2s ease}
+  nav.scrolled .nav-toggle span{background:var(--evergreen); box-shadow:none}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  @media(max-width:760px){
+    .nav-toggle{display:flex}
+    .nav-links{position:fixed; inset:0 0 0 auto; width:min(80vw,320px); height:100vh; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:2px; padding:86px 24px 28px; background:var(--evergreen-deep); transform:translateX(105%); transition:transform .34s cubic-bezier(.2,.7,.2,1); box-shadow:-20px 0 60px -28px rgba(0,0,0,.7); overflow-y:auto}
+    .nav-links.open{transform:none}
+    .nav-links a{color:#fff!important; text-shadow:none!important; font-size:1.02rem; text-transform:none; letter-spacing:.01em; padding:13px 4px; border-bottom:1px solid rgba(255,255,255,.09)}
+    nav.scrolled .nav-links a{color:#fff!important}
+    .nav-links a:hover{color:var(--sun-soft)!important}
+    .nav-links .nav-cta{margin-top:16px; background:var(--sun); color:#fff!important; border-radius:40px; padding:13px 18px; text-align:center; border-bottom:0}
+  }
 
-/* ── SECTIONS ── */
-section { padding: 90px 24px; }
-.section-inner { max-width: var(--max); margin: 0 auto; }
-.section-eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-.section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
-.section-body { font-size: 1rem; color: var(--muted); max-width: 620px; line-height: 1.8; }
+  /* ---------- HERO ---------- */
+  .hero{height:100svh; min-height:620px; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; text-align:center;}
+  .hero svg.range{position:absolute; inset:0; width:100%; height:100%}
+  .hero .layer{will-change:transform}
+  .birds{animation:drift 17s ease-in-out infinite}
+  @keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(48px)}}
+  .hero-content{position:relative; z-index:5; padding:0 24px; max-width:860px;
+    transform:translateY(-3vh)}
+  .hero .eyebrow{font-family:'Caveat',cursive; font-size:clamp(1.5rem,3.4vw,2.2rem);
+    color:#fff; text-shadow:0 2px 18px rgba(22,52,40,.6); margin-bottom:.1em}
+  .hero h1{color:#fff; font-size:clamp(3rem,9vw,6.4rem); font-weight:600;
+    text-shadow:0 6px 34px rgba(15,34,26,.55); letter-spacing:-.02em}
+  .hero .tagline{font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+    color:#fdf6ea; font-size:clamp(1.05rem,2.5vw,1.5rem); margin:.7em auto 0; max-width:30ch;
+    text-shadow:0 2px 16px rgba(15,34,26,.5)}
+  .hero .ctas{display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:2em}
+  .btn{display:inline-flex; align-items:center; gap:9px; padding:15px 30px; border-radius:44px;
+    font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:.92rem; letter-spacing:.02em;
+    cursor:pointer; border:2px solid transparent; transition:transform .2s, box-shadow .2s, background .2s}
+  .btn-primary{background:var(--sun); color:#fff; box-shadow:0 14px 34px -12px rgba(224,145,63,.95)}
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 20px 40px -12px rgba(224,145,63,1); background:#e89a47}
+  .btn-ghost{background:rgba(247,243,234,.12); color:#fff; border-color:rgba(255,255,255,.7); backdrop-filter:blur(2px)}
+  .btn-ghost:hover{background:rgba(247,243,234,.22); transform:translateY(-3px)}
+  .scrollcue{position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:5;
+    color:#fff; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; opacity:.8;
+    text-shadow:0 1px 8px rgba(0,0,0,.5); animation:bob 2.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
-/* ── STORY ── */
-.story { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-@media (max-width: 768px) { .story-grid { grid-template-columns: 1fr; gap: 40px; } }
-.story-text p { color: var(--muted); line-height: 1.9; font-size: 0.97rem; margin-bottom: 16px; }
-.story-text p:last-child { margin-bottom: 0; }
-.story-text strong { color: var(--text); }
-.story-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.story-stat {
-  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
-  padding: 20px; text-align: center;
-}
-.story-stat-val { font-size: 2rem; font-weight: 900; color: var(--gold); }
-.story-stat-lbl { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  /* entrance */
+  .rise{opacity:0; transform:translateY(26px); animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.15s}.d2{animation-delay:.35s}.d3{animation-delay:.55s}.d4{animation-delay:.75s}
+  @keyframes rise{to{opacity:1; transform:none}}
 
-/* ── MISSION/VISION/VALUES ── */
-.mvv { background: var(--bg); }
-.mvv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 48px; }
-.mvv-card {
-  background: var(--panel); border: 1px solid var(--border);
-  border-radius: 16px; padding: 32px 28px;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.mvv-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
-.mvv-icon { font-size: 2.2rem; margin-bottom: 16px; }
-.mvv-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.mvv-title { font-size: 1.25rem; font-weight: 800; color: var(--text); margin-bottom: 12px; }
-.mvv-body { font-size: 0.88rem; color: var(--muted); line-height: 1.8; }
+  /* torn paper edge */
+  .torn{position:absolute; left:0; width:100%; line-height:0; z-index:6}
+  .torn.top{top:-1px}
+  .torn svg{width:100%; height:46px; display:block}
 
-/* ── HOW WE WORK ── */
-.how { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.how-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 48px; }
-.how-step {
-  background: var(--panel); border: 1px solid var(--border);
-  border-radius: 14px; padding: 28px 24px; position: relative;
-}
-.how-num {
-  font-size: 3rem; font-weight: 900; color: var(--border);
-  position: absolute; top: 16px; right: 20px; line-height: 1;
-}
-.how-icon { font-size: 1.8rem; margin-bottom: 12px; }
-.how-title { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-.how-body { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+  /* ---------- WELCOME ---------- */
+  .welcome{background:var(--paper); padding:96px 0 60px; text-align:center}
+  .welcome .script{color:var(--clay); font-size:clamp(1.7rem,4vw,2.6rem)}
+  .welcome h2{font-size:clamp(2rem,5vw,3.1rem); margin:.1em 0 .5em}
+  .welcome p{max-width:60ch; margin:0 auto; color:var(--ink-soft); font-size:1.12rem}
+  .lead-em{color:var(--evergreen); font-weight:700}
 
-/* ── SHOP ── */
-.shop { background: var(--bg); }
-.platform-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-top: 40px; }
-.platform-card {
-  background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
-  padding: 20px 16px; text-align: center; text-decoration: none;
-  color: var(--text); transition: border-color 0.2s, transform 0.15s;
-}
-.platform-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-.platform-icon { font-size: 2rem; margin-bottom: 8px; }
-.platform-name { font-size: 0.85rem; font-weight: 700; }
-.platform-sub { font-size: 0.68rem; color: var(--muted); margin-top: 3px; }
+  /* ---------- THREE MOUNTAINS ---------- */
+  .mountains{background:linear-gradient(180deg,var(--paper),var(--paper-2)); padding:34px 0 96px}
+  .sec-head{text-align:center; max-width:40ch; margin:0 auto 54px}
+  .sec-head .script{color:var(--sun); font-size:clamp(1.4rem,3.2vw,2rem)}
+  .sec-head h2{font-size:clamp(2rem,5vw,3.2rem); margin-top:.05em}
+  .three{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+  @media(max-width:880px){.three{grid-template-columns:1fr; max-width:440px; margin:0 auto}}
+  .peak-card{background:var(--paper); border:1px solid var(--paper-3); border-radius:20px;
+    padding:34px 28px 30px; position:relative; overflow:hidden; box-shadow:var(--shadow);
+    transition:transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s}
+  .peak-card:hover{transform:translateY(-8px); box-shadow:0 30px 60px -28px rgba(22,52,40,.55)}
+  .peak-card .pk{position:absolute; top:0; right:0; width:120px; height:120px; opacity:.13;
+    transform:translate(26px,-26px)}
+  .peak-card .num{font-family:'Caveat',cursive; font-size:1.5rem; color:var(--sun); font-weight:700}
+  .peak-card h3{font-size:1.62rem; margin:.15em 0 .1em}
+  .peak-card .kicker{font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    font-size:.7rem; color:var(--river)}
+  .peak-card p{color:var(--ink-soft); font-size:.98rem; margin:.7em 0 1.2em}
+  .peak-card a.go{font-weight:800; font-size:.86rem; color:var(--evergreen);
+    display:inline-flex; gap:7px; align-items:center; transition:gap .2s, color .2s}
+  .peak-card a.go:hover{gap:13px; color:var(--clay)}
+  .peak-card .bar{height:5px; border-radius:5px; margin-bottom:20px; width:54px}
 
-/* ── JOURNEY (boss) ── */
-.journey { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.journey-intro { font-size: 0.97rem; color: var(--muted); line-height: 1.8; max-width: 620px; margin-bottom: 40px; }
-.boss-card {
-  background: var(--panel); border: 1px solid var(--gold-dim);
-  border-radius: 16px; padding: 28px; max-width: 580px;
-}
-.boss-card-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-.boss-card-name { font-size: 1.4rem; font-weight: 900; color: var(--text); margin-bottom: 6px; }
-.boss-card-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 16px; }
-.boss-bar-wrap { background: #1a1a2e; border-radius: 6px; height: 12px; overflow: hidden; margin-bottom: 8px; }
-.boss-bar { height: 100%; border-radius: 6px; background: linear-gradient(90deg, #2ecc71, #7fffb0); transition: width 1s ease; }
-.boss-pct { font-size: 0.78rem; color: var(--muted); }
-.debt-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
-.debt-item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
-.debt-name { font-size: 0.75rem; color: var(--text); font-weight: 600; }
-.debt-amt { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+  /* ---------- STORY ---------- */
+  .story{position:relative; color:#fff; isolation:isolate}
+  .story .bg{position:absolute; inset:0; z-index:-2; object-fit:cover; width:100%; height:100%}
+  .story::before{content:""; position:absolute; inset:0; z-index:-1;
+    background:linear-gradient(100deg,rgba(17,33,27,.93) 0%,rgba(17,33,27,.68) 44%,rgba(20,40,50,.16) 100%)}
+  .story .wrap{padding:104px 26px}
+  .story .inner{max-width:30ch}
+  .story .script{color:var(--sun-soft); font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .story h2{font-size:clamp(2.1rem,5vw,3.3rem); margin:.1em 0 .55em}
+  .story p{font-size:1.12rem; color:#eef3ee; max-width:46ch; margin-bottom:1.4em}
+  .story .sign{font-family:'Caveat',cursive; font-size:1.9rem; color:#fff}
 
-/* ── VISION ── */
-.vision { background: var(--bg); }
-.vision-body { font-size: 0.97rem; color: var(--muted); line-height: 1.9; max-width: 680px; margin-bottom: 40px; }
-.vision-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-.pillar {
-  background: var(--panel); border: 1px solid var(--border);
-  border-radius: 12px; padding: 24px 20px;
-}
-.pillar-icon { font-size: 1.8rem; margin-bottom: 10px; }
-.pillar-title { font-size: 0.92rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-.pillar-body { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+  /* ---------- SHOP ---------- */
+  .shop{background:var(--evergreen-deep); color:var(--paper); text-align:center; padding:92px 0}
+  .shop .script{color:var(--sun-soft); font-size:clamp(1.4rem,3.2vw,2rem)}
+  .shop h2{color:#fff; font-size:clamp(2rem,5vw,3rem); margin:.05em 0 .4em}
+  .shop p{color:#cdd8cf; max-width:48ch; margin:0 auto 2em}
+  .chips{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; max-width:680px; margin:0 auto 2.2em}
+  .chip{padding:11px 20px; border-radius:40px; border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.05); font-weight:700; font-size:.86rem; color:#eaf0ea;
+    transition:background .2s, border-color .2s, transform .2s}
+  .chip:hover{background:var(--sun); border-color:var(--sun); color:#fff; transform:translateY(-3px)}
 
-/* ── TEAM ── */
-.team { background: var(--surface); border-top: 1px solid var(--border); }
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
-.team-card {
-  background: var(--panel); border: 1px solid var(--border);
-  border-radius: 16px; overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.team-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
-.team-portrait { width: 100%; height: 220px; overflow: hidden; }
-.team-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-.team-info { padding: 24px; }
-.team-name { font-size: 1.3rem; font-weight: 900; color: var(--text); }
-.team-title { font-size: 0.78rem; color: var(--gold); margin-top: 3px; letter-spacing: 1px; }
-.team-bio { font-size: 0.84rem; color: var(--muted); margin-top: 12px; line-height: 1.7; }
-.team-link {
-  display: inline-block; margin-top: 14px; font-size: 0.78rem; font-weight: 700;
-  color: var(--bg); background: var(--gold); padding: 7px 16px; border-radius: 8px;
-  text-decoration: none;
-}
+  /* ---------- SIGNOFF ---------- */
+  .signoff{background:var(--paper); text-align:center; padding:96px 0 70px}
+  .signoff .big{font-family:'Caveat',cursive; font-weight:700; color:var(--evergreen);
+    font-size:clamp(2.4rem,6vw,4rem); line-height:.95}
+  .signoff .from{color:var(--ink-soft); margin:1.4em 0 .2em; font-style:italic; font-family:'Fraunces',serif}
+  .signoff .fam{font-size:1.25rem; font-weight:800; color:var(--ink)}
+  .signoff .btn{margin-top:2em; background:var(--evergreen); color:#fff}
+  .signoff .btn:hover{background:var(--evergreen-2); transform:translateY(-3px)}
 
-/* ── CTA ── */
-.cta-section {
-  background: radial-gradient(ellipse at 50% 50%, #1a1040 0%, var(--bg) 70%);
-  border-top: 1px solid var(--border); text-align: center; padding: 100px 24px;
-}
-.cta-title { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--gold); margin-bottom: 16px; }
-.cta-body { font-size: 1rem; color: var(--muted); max-width: 500px; margin: 0 auto 36px; line-height: 1.8; }
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--evergreen-deep); color:#bcccc0; padding:48px 26px 40px; position:relative}
+  .foot-in{max-width:var(--max); margin:0 auto; display:flex; justify-content:space-between;
+    align-items:center; gap:24px; flex-wrap:wrap}
+  .foot-brand{display:flex; align-items:center; gap:11px}
+  .foot-brand img{width:46px; height:46px}
+  .foot-brand b{font-family:'Caveat',cursive; color:#fff; font-size:1.5rem}
+  .foot-links{display:flex; gap:22px; flex-wrap:wrap}
+  .foot-links a{font-size:.82rem; font-weight:700; letter-spacing:.03em; color:#bcccc0; text-transform:uppercase}
+  .foot-links a:hover{color:var(--sun-soft)}
+  .foot-fine{width:100%; text-align:center; margin-top:30px; font-size:.78rem; color:#7f978a;
+    border-top:1px solid rgba(255,255,255,.08); padding-top:22px}
 
-/* ── FOOTER ── */
-footer {
-  background: var(--surface); border-top: 1px solid var(--border);
-  padding: 48px 24px 32px;
-}
-.footer-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
-@media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr; gap: 32px; } }
-.footer-brand-name { font-size: 1.2rem; font-weight: 900; color: var(--gold); margin-bottom: 10px; }
-.footer-brand-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.8; max-width: 280px; }
-.footer-col-title { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 12px; }
-.footer-col a { display: block; font-size: 0.82rem; color: var(--muted); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
-.footer-col a:hover { color: var(--gold); }
-.footer-bottom { max-width: var(--max); margin: 32px auto 0; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.footer-copy { font-size: 0.72rem; color: #444; }
-.footer-faith { font-size: 0.72rem; color: #333; }
+  /* reveal on scroll */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1; transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important; transition:none!important}
+    .rise,.reveal{opacity:1!important; transform:none!important}
+  }
 </style>
+<link rel="icon" type="image/png" href="/assets/round-logo.png">
+<link rel="apple-touch-icon" href="/assets/round-logo.png">
+<meta property="og:image" content="https://movingmountains.community/assets/banner1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://movingmountains.community/assets/banner1.png">
 </head>
 <body>
+<div class="grain"></div>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-brand">🏔️ MOVING MOUNTAINS</a>
-  <div class="nav-links">
-    <a href="#story">Our Story</a>
-    <a href="#mission">Mission</a>
-    <a href="#shop">Shop</a>
-    <a href="#journey">The Journey</a>
-    <a href="#vision">Vision</a>
-    <a href="#team">Team</a>
+<nav id="nav">
+  <a class="brand" href="#top">
+    <img src="assets/round-logo.png" alt="Moving Mountains Community — eagle crest">
+    <b>Moving Mountains</b>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/links">All Links</a>
+    <a href="/james">James</a>
+    <a href="/kalli">Kalli</a>
+    <a href="/fit">Fit</a>
+    <a href="/shop" class="nav-cta">Shop →</a>
   </div>
-  <a href="#shop" class="nav-cta">Shop Now</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-eyebrow">Est. 2026 · Family Business</div>
-  <div class="hero-logo">🏔️</div>
-  <h1 class="hero-title">Moving Mountains</h1>
-  <p class="hero-tagline">Fight debt. Build the business. Level up together.</p>
-  <p class="hero-sub">A husband-and-wife team turning thrift finds into income, one listing at a time — powered by hustle, faith, and technology we built ourselves.</p>
-  <div class="hero-ctas">
-    <a href="#shop" class="btn-primary">Shop Our Listings</a>
-    <a href="#story" class="btn-secondary">Our Story →</a>
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <svg class="range" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#cfe0ec"/>
+        <stop offset="55%" stop-color="#e3e7e3"/>
+        <stop offset="100%" stop-color="#f6dcb6"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#fff3df"/>
+        <stop offset="35%" stop-color="#f7c074"/>
+        <stop offset="100%" stop-color="#f7c074" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#sky)"/>
+    <circle cx="1010" cy="288" r="210" fill="url(#sun)"/>
+    <circle cx="1010" cy="288" r="62" fill="#ffe9c6"/>
+    <!-- soaring eagles -->
+    <g class="birds" fill="#21402f" opacity=".75">
+      <path transform="translate(360,168) scale(1.15)" d="M0,0 C8,-7 14,-7 22,-1 C14,-3 9,-3 0,3 C-9,-3 -14,-3 -22,-1 C-14,-7 -8,-7 0,0 Z"/>
+      <path transform="translate(520,128) scale(.72)" d="M0,0 C8,-7 14,-7 22,-1 C14,-3 9,-3 0,3 C-9,-3 -14,-3 -22,-1 C-14,-7 -8,-7 0,0 Z"/>
+      <path transform="translate(255,210) scale(.5)" d="M0,0 C8,-7 14,-7 22,-1 C14,-3 9,-3 0,3 C-9,-3 -14,-3 -22,-1 C-14,-7 -8,-7 0,0 Z"/>
+    </g>
+    <!-- far range -->
+    <path class="layer" data-depth="6" fill="#aac0d1" d="M0,372 L150,300 L300,352 L470,262 L640,338 L820,272 L1010,340 L1190,286 L1330,344 L1440,300 L1440,760 L0,760 Z"/>
+    <!-- mist -->
+    <rect y="356" width="1440" height="70" fill="#eef2f2" opacity=".45"/>
+    <!-- mid range -->
+    <path class="layer" data-depth="12" fill="#6f8ba3" d="M0,450 L180,386 L360,452 L520,398 L700,470 L900,392 L1080,460 L1260,404 L1440,452 L1440,760 L0,760 Z"/>
+    <!-- near range -->
+    <path class="layer" data-depth="20" fill="#41607a" d="M0,540 L220,470 L430,544 L640,486 L860,556 L1080,484 L1290,540 L1440,500 L1440,760 L0,760 Z"/>
+    <!-- forest -->
+    <path class="layer" data-depth="30" fill="#1f4838" d="M0,602 L120,584 L240,606 L360,582 L480,608 L600,586 L720,610 L840,588 L960,610 L1080,586 L1200,606 L1320,584 L1440,604 L1440,760 L0,760 Z"/>
+    <g class="layer" data-depth="34" fill="#163428">
+      <path d="M150,600 l14,30 h-28 Z"/><path d="M330,596 l16,34 h-32 Z"/><path d="M520,602 l13,28 h-26 Z"/>
+      <path d="M690,598 l17,34 h-34 Z"/><path d="M880,602 l14,30 h-28 Z"/><path d="M1060,596 l16,34 h-32 Z"/>
+      <path d="M1250,600 l14,30 h-28 Z"/><path d="M1380,597 l16,33 h-32 Z"/>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <div class="eyebrow rise d1">welcome, trail family</div>
+    <h1 class="rise d2">Moving&nbsp;Mountains</h1>
+    <p class="tagline rise d3">A family climbing its way out — one thrift find, one workout, one step up the trail at a time.</p>
+    <div class="ctas rise d4">
+      <a href="#shop" class="btn btn-primary">Shop our closet →</a>
+      <a href="#climb" class="btn btn-ghost">Walk with us</a>
+    </div>
   </div>
-  <div class="hero-scroll">↓ scroll</div>
+  <div class="scrollcue">scroll</div>
+</header>
+
+<!-- ===================== WELCOME ===================== -->
+<section class="welcome" id="climb">
+  <div class="torn top"><svg viewBox="0 0 1440 46" preserveAspectRatio="none"><path fill="#f7f3ea" d="M0,46 L0,20 C70,8 130,30 210,18 C300,5 360,28 450,16 C540,6 610,30 700,20 C800,9 860,30 950,18 C1050,6 1110,28 1200,17 C1290,7 1360,26 1440,16 L1440,46 Z"/></svg></div>
+  <div class="wrap">
+    <div class="script reveal">Hello there, Mountain Friend.</div>
+    <h2 class="reveal">Step into this little clearing<br>of gratitude.</h2>
+    <p class="reveal">We're <span class="lead-em">James &amp; Kalli</span> — a husband-and-wife team turning secondhand treasures into a debt-free future. Every purchase, every cheer, every follow is another handhold on the rock face, propelling us toward the summit. You're not just a customer here. You're part of our trail family.</p>
+  </div>
 </section>
 
-<!-- STORY -->
+<!-- ===================== THREE MOUNTAINS ===================== -->
+<section class="mountains" id="mountains">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="script">every summit starts at the trailhead</div>
+      <h2>Three mountains.<br>One family. One climb.</h2>
+    </div>
+    <div class="three">
+      <article class="peak-card reveal">
+        <svg class="pk" viewBox="0 0 100 100" fill="var(--evergreen)"><path d="M2,96 L38,30 L54,58 L70,24 L98,96 Z"/></svg>
+        <div class="bar" style="background:var(--sun)"></div>
+        <div class="num">01</div>
+        <div class="kicker">The Financial Mountain</div>
+        <h3>From debt to daylight.</h3>
+        <p>We resell across seven platforms to climb out of debt — and out of a house that's grown too small for the life we want. Every sale is a step up the trail.</p>
+        <a class="go" href="#shop">Shop the closet →</a>
+      </article>
+      <article class="peak-card reveal">
+        <svg class="pk" viewBox="0 0 100 100" fill="var(--clay)"><path d="M2,96 L38,30 L54,58 L70,24 L98,96 Z"/></svg>
+        <div class="bar" style="background:var(--clay)"></div>
+        <div class="num">02</div>
+        <div class="kicker">The Health Mountain</div>
+        <h3>Dumpster Fire to Fit.</h3>
+        <p>Kalli's climb from burnt-out to strong — functional, fit, and finding her purpose. Funny, honest, and refreshingly no-filter. Come cheer her up the switchbacks.</p>
+        <a class="go" href="/fit">Follow Kalli's climb →</a>
+      </article>
+      <article class="peak-card reveal">
+        <svg class="pk" viewBox="0 0 100 100" fill="var(--peak)"><path d="M2,96 L38,30 L54,58 L70,24 L98,96 Z"/></svg>
+        <div class="bar" style="background:var(--peak)"></div>
+        <div class="num">03</div>
+        <div class="kicker">The Life Mountain</div>
+        <h3>A healthier life, rooted.</h3>
+        <p>The whole-family summit: out of the mold, into clean country air, and building something that lasts for our kids. This is the mountain all the others move toward.</p>
+        <a class="go" href="#story">Our story →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY ===================== -->
 <section class="story" id="story">
-  <div class="section-inner">
-    <div class="story-grid">
-      <div class="story-text">
-        <div class="section-eyebrow">Our Story</div>
-        <h2 class="section-title">Built from nothing.<br>Building something real.</h2>
-        <p>We're James and Kallan Schoonover — a married couple who decided that debt wasn't going to define our future. Instead of waiting for a way out, we built one.</p>
-        <p>What started as selling items around the house grew into a <strong>multi-platform reselling operation</strong> across 7 marketplaces. James drives for Spark and sources inventory. Kallan photographs and prepares every listing. Together, we've built the tools, the process, and the discipline to make it work.</p>
-        <p>We're not just selling stuff. We're building a business, fighting debt boss by boss, and proving that <strong>ordinary families can build extraordinary things</strong> when they commit to the grind.</p>
-      </div>
-      <div>
-        <div class="story-stat-grid">
-          <div class="story-stat">
-            <div class="story-stat-val">7</div>
-            <div class="story-stat-lbl">Platforms</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val" id="statListings">45+</div>
-            <div class="story-stat-lbl">Items Sold</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val">2</div>
-            <div class="story-stat-lbl">Founders</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val">1</div>
-            <div class="story-stat-lbl">Mission</div>
-          </div>
-        </div>
-      </div>
+  <svg class="bg" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#20364a"/>
+        <stop offset="52%" stop-color="#3b4a45"/>
+        <stop offset="100%" stop-color="#7e4a2b"/>
+      </linearGradient>
+      <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#ffe9c2" stop-opacity=".85"/>
+        <stop offset="100%" stop-color="#ffe9c2" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="720" fill="url(#dusk)"/>
+    <circle cx="1130" cy="178" r="120" fill="url(#moon)"/>
+    <circle cx="1130" cy="178" r="40" fill="#f3d8a6"/>
+    <path fill="#36536b" d="M0,330 L180,288 L340,332 L520,280 L700,330 L880,284 L1060,330 L1240,288 L1440,326 L1440,720 L0,720 Z"/>
+    <path fill="#284049" d="M0,420 L200,366 L380,424 L560,378 L760,432 L960,372 L1140,428 L1320,382 L1440,420 L1440,720 L0,720 Z"/>
+    <path fill="#1b3330" d="M0,510 L240,452 L460,516 L680,470 L900,524 L1120,466 L1320,514 L1440,486 L1440,720 L0,720 Z"/>
+    <path fill="#112320" d="M0,584 L160,566 L320,590 L480,566 L640,592 L800,570 L960,592 L1120,568 L1280,590 L1440,572 L1440,720 L0,720 Z"/>
+  </svg>
+  <div class="wrap">
+    <div class="inner reveal">
+      <div class="script">we started at the bottom of the hill</div>
+      <h2>No shortcuts.<br>Just the climb.</h2>
+      <p>No handouts — just a husband and wife, a camera, a pile of thrift finds, and a stubborn belief that families can move mountains when they climb together.</p>
+      <p>The path isn't always easy. But it's the people who show up along the way — like you — that make every climb worth it. You help us keep our fire burning through every season.</p>
+      <div class="sign">Keep climbing, — James &amp; Kalli</div>
     </div>
   </div>
 </section>
 
-<!-- MISSION / VISION / VALUES -->
-<section class="mvv" id="mission">
-  <div class="section-inner">
-    <div class="section-eyebrow">What We Stand For</div>
-    <h2 class="section-title">Mission. Vision. Values.</h2>
-    <div class="mvv-grid">
-      <div class="mvv-card">
-        <div class="mvv-icon">🎯</div>
-        <div class="mvv-label">Mission</div>
-        <div class="mvv-title">Help families fight debt and build real income</div>
-        <div class="mvv-body">We use reselling, technology, and relentless consistency to create sustainable income streams — proving that financial freedom is achievable for anyone willing to do the work.</div>
-      </div>
-      <div class="mvv-card">
-        <div class="mvv-icon">🌄</div>
-        <div class="mvv-label">Vision</div>
-        <div class="mvv-title">Become the platform other families use to do what we did</div>
-        <div class="mvv-body">Long-term, Moving Mountains becomes a platform — gamified debt payoff tools, AI-assisted reselling, and a community of families fighting for financial freedom together.</div>
-      </div>
-      <div class="mvv-card">
-        <div class="mvv-icon">⚖️</div>
-        <div class="mvv-label">Values</div>
-        <div class="mvv-title">Faith · Family · Hustle · Transparency · Community</div>
-        <div class="mvv-body">We lead with faith and operate with integrity. Family comes first. We grind without apology. We share our journey openly — wins and struggles alike. We believe in lifting others as we climb.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW WE WORK -->
-<section class="how" id="how">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Process</div>
-    <h2 class="section-title">How we turn thrift finds<br>into real income.</h2>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-num">01</div>
-        <div class="how-icon">🔍</div>
-        <div class="how-title">Source</div>
-        <div class="how-body">James hunts thrift stores, estate sales, and roadside finds — identifying items with resale value.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">02</div>
-        <div class="how-icon">📸</div>
-        <div class="how-title">Photograph</div>
-        <div class="how-body">Kallan photographs every item with a professional process — clean backgrounds, multiple angles, accurate representation.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">03</div>
-        <div class="how-icon">🤖</div>
-        <div class="how-title">AI-Powered Listing</div>
-        <div class="how-body">Our custom-built AI tool analyzes photos and generates optimized listings for 7 platforms simultaneously.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">04</div>
-        <div class="how-icon">📦</div>
-        <div class="how-title">Ship Fast</div>
-        <div class="how-body">Every sale is packed carefully and shipped quickly. Real people, real service, real accountability.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">05</div>
-        <div class="how-icon">💰</div>
-        <div class="how-title">Reinvest</div>
-        <div class="how-body">Profits go straight at debt elimination and inventory reinvestment — building momentum with every sale.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHOP -->
+<!-- ===================== SHOP ===================== -->
 <section class="shop" id="shop">
-  <div class="section-inner">
-    <div class="section-eyebrow">Shop</div>
-    <h2 class="section-title">Find us on your favorite platform.</h2>
-    <p class="section-body">We list on 7 marketplaces so you can shop wherever you're most comfortable. Every item is accurately described, carefully packed, and shipped fast.</p>
-    <div class="platform-grid">
-      <a href="#" class="platform-card" id="pEbay">
-        <div class="platform-icon">🛍️</div>
-        <div class="platform-name">eBay</div>
-        <div class="platform-sub">Home goods & fashion</div>
-      </a>
-      <a href="#" class="platform-card" id="pPoshmark">
-        <div class="platform-icon">👗</div>
-        <div class="platform-name">Poshmark</div>
-        <div class="platform-sub">Clothing & accessories</div>
-      </a>
-      <a href="#" class="platform-card" id="pMercari">
-        <div class="platform-icon">📦</div>
-        <div class="platform-name">Mercari</div>
-        <div class="platform-sub">Fast shipping</div>
-      </a>
-      <a href="#" class="platform-card" id="pDepop">
-        <div class="platform-icon">✨</div>
-        <div class="platform-name">Depop</div>
-        <div class="platform-sub">Vintage & unique</div>
-      </a>
-      <a href="#" class="platform-card" id="pFacebook">
-        <div class="platform-icon">📍</div>
-        <div class="platform-name">Facebook</div>
-        <div class="platform-sub">Local & shipped</div>
-      </a>
-      <a href="#" class="platform-card" id="pVinted">
-        <div class="platform-icon">🌿</div>
-        <div class="platform-name">Vinted</div>
-        <div class="platform-sub">Affordable fashion</div>
-      </a>
+  <div class="wrap">
+    <div class="script reveal">real finds, fair prices, fast shipping</div>
+    <h2 class="reveal">Shop our closet.</h2>
+    <p class="reveal">Every order is another step up the mountain — and a great deal headed your way. Find us on your favorite platform:</p>
+    <div class="chips reveal">
+      <a class="chip" href="https://www.ebay.com/str/movingmountainscommunity" target="_blank" rel="noopener">🛍️ eBay Store</a>
+      <a class="chip" href="https://www.vinted.com/member/255545827" target="_blank" rel="noopener">🧥 Vinted</a>
+      <a class="chip" href="https://poshmark.com/closet/movgmtnscomm" target="_blank" rel="noopener">👗 Poshmark</a>
+      <a class="chip" href="https://www.mercari.com/u/379363271/" target="_blank" rel="noopener">📦 Mercari</a>
+      <a class="chip" href="https://www.depop.com/movgmtnscomm/" target="_blank" rel="noopener">✨ Depop</a>
+      <a class="chip" href="https://whatnot.com/invite/moving_mountains_community" target="_blank" rel="noopener">🎥 Whatnot</a>
     </div>
   </div>
 </section>
 
-<!-- THE JOURNEY -->
-<section class="journey" id="journey">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Journey</div>
-    <h2 class="section-title">We share our journey publicly.<br>No filter.</h2>
-    <p class="journey-intro">We track our debt payoff like a game — each debt is a boss we're fighting. We think financial transparency is powerful, so we share where we are and where we're going. Every sale moves the bar.</p>
-    <div class="boss-card">
-      <div class="boss-card-label">⚔️ Current Boss Battle</div>
-      <div class="boss-card-name" id="bossName">Loading...</div>
-      <div class="boss-card-sub" id="bossSub">Tracking live progress</div>
-      <div class="boss-bar-wrap"><div class="boss-bar" id="bossBar" style="width:0%"></div></div>
-      <div class="boss-pct" id="bossPct"></div>
-    </div>
+<!-- ===================== SIGNOFF ===================== -->
+<section class="signoff">
+  <div class="wrap">
+    <div class="big reveal">Stay rooted.<br>Keep climbing.</div>
+    <div class="from reveal">With gratitude from the trails,</div>
+    <div class="fam reveal">James, Kalli, &amp; The Moving Mountains Community Family</div>
+    <a href="mailto:support@movingmountains.community" class="btn reveal">Say hello →</a>
   </div>
 </section>
 
-<!-- LONG-TERM VISION -->
-<section class="vision" id="vision">
-  <div class="section-inner">
-    <div class="section-eyebrow">Where We're Going</div>
-    <h2 class="section-title">Moving Mountains is bigger<br>than reselling.</h2>
-    <p class="vision-body">The reselling business is how we started — but the mission doesn't stop there. We're building toward a platform that helps other families do exactly what we're doing: fight debt systematically, build income intelligently, and gamify the grind so it actually sticks.</p>
-    <div class="vision-pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🎮</div>
-        <div class="pillar-title">Gamified Debt Payoff</div>
-        <div class="pillar-body">Turn the debt snowball into an RPG. Bosses, XP, gear unlocks — making the hardest financial work feel like progress worth celebrating.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🤖</div>
-        <div class="pillar-title">AI Reselling Tools</div>
-        <div class="pillar-body">The listing pipeline we built for ourselves — eventually available to other resellers. AI-powered, multi-platform, built by resellers for resellers.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🏔️</div>
-        <div class="pillar-title">A Community</div>
-        <div class="pillar-body">Families fighting debt together. Sharing wins, strategies, and accountability. Moving mountains is easier when you're not doing it alone.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">✝️</div>
-        <div class="pillar-title">Faith-Centered</div>
-        <div class="pillar-body">Everything we build is grounded in faith and family values. Financial freedom is part of living out the life we believe we're called to.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="team" id="team">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Team</div>
-    <h2 class="section-title">Two people. One mission.</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-portrait">
-          <img src="https://jamescschoonover.github.io/Game-Of-Life/images/james_base.jpg" alt="James Schoonover">
-        </div>
-        <div class="team-info">
-          <div class="team-name">James Schoonover</div>
-          <div class="team-title">⚡ THE GRINDER · Co-Founder</div>
-          <div class="team-bio">Sourcer, driver, builder. James hunts inventory, runs deliveries, and builds the technology that powers Moving Mountains. He's the one who decided debt wasn't winning.</div>
-          <a href="https://jamescschoonover.github.io/Game-Of-Life/links-james.html" class="team-link">View James's Page →</a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-portrait">
-          <img src="https://jamescschoonover.github.io/Game-Of-Life/images/kallan_base.jpg" alt="Kallan Schoonover">
-        </div>
-        <div class="team-info">
-          <div class="team-name">Kallan Schoonover</div>
-          <div class="team-title">🥊 THE KICKBOXER · Co-Founder</div>
-          <div class="team-bio">Photographer, lister, co-founder. Kallan brings the eye for detail that makes every listing shine — and the consistency that keeps the operation running day after day.</div>
-          <a href="https://jamescschoonover.github.io/Game-Of-Life/links-kallan.html" class="team-link">View Kallan's Page →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-eyebrow" style="text-align:center">Ready?</div>
-    <h2 class="cta-title">Shop our listings.</h2>
-    <p class="cta-body">Every purchase directly supports our family's mission. You get a great deal on a quality item. We get one step closer to debt-free. Everybody wins.</p>
-    <div class="hero-ctas">
-      <a href="#shop" class="btn-primary">Browse All Platforms</a>
-      <a href="mailto:james.c.schoonover@gmail.com" class="btn-secondary">Contact Us →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ===================== FOOTER ===================== -->
 <footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand-name">🏔️ Moving Mountains</div>
-      <div class="footer-brand-desc">A family reselling business on a mission to fight debt, build income, and level up together. Built from scratch. Running on faith and hustle.</div>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Navigate</div>
+  <div class="foot-in">
+    <a class="foot-brand" href="#top">
+      <img src="assets/round-logo.png" alt="Moving Mountains Community crest">
+      <b>Moving Mountains</b>
+    </a>
+    <div class="foot-links">
+      <a href="/shop">Shop</a>
+      <a href="/fit">Dumpster Fire to Fit</a>
+      <a href="/links">All Links</a>
+      <a href="/james">James</a>
+      <a href="/kalli">Kalli</a>
       <a href="#story">Our Story</a>
-      <a href="#mission">Mission</a>
-      <a href="#shop">Shop</a>
-      <a href="#journey">The Journey</a>
-      <a href="#vision">Vision</a>
-      <a href="#team">Team</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Connect</div>
-      <a href="mailto:james.c.schoonover@gmail.com">Email Us</a>
-      <a href="https://jamescschoonover.github.io/Game-Of-Life/links-james.html">James's Links</a>
-      <a href="https://jamescschoonover.github.io/Game-Of-Life/links-kallan.html">Kallan's Links</a>
+      <a href="mailto:support@movingmountains.community">Contact</a>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Moving Mountains. All rights reserved.</div>
-    <div class="footer-faith">Fight debt. Build the business. Level up together.</div>
-  </div>
+  <div class="foot-fine">© 2026 Moving Mountains Community · Made with grit &amp; gratitude on the trail 🏔️</div>
 </footer>
 
-<script type="module">
-import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
-import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
-const _cfg = { apiKey:"AIzaSyCTLN0v2LihL9o8Wvj9LDoyrVMNsdC4mkw", authDomain:"forge-game.firebaseapp.com", projectId:"forge-game", storageBucket:"forge-game.firebasestorage.app", messagingSenderId:"558100909348", appId:"1:558100909348:web:d9f51ec807001c4e1f37b1" };
-const app = getApps().find(a=>a.name==='mm-site') || initializeApp(_cfg,'mm-site');
-const db  = getFirestore(app);
-async function loadBoss() {
-  try {
-    const snap = await getDoc(doc(db,'game_state','snowball'));
-    if(!snap.exists()) return;
-    const d = snap.data();
-    const boss = d.current_boss;
-    if(!boss) return;
-    const rem   = boss.remaining ?? boss.balance ?? 0;
-    const total = boss.total ?? boss.original ?? rem;
-    const pct   = total > 0 ? Math.round(((total-rem)/total)*100) : 0;
-    document.getElementById('bossName').textContent = boss.name ?? 'Current Boss';
-    document.getElementById('bossSub').textContent  = '$' + rem.toFixed(2) + ' remaining — ' + pct + '% defeated';
-    document.getElementById('bossBar').style.width  = pct + '%';
-    document.getElementById('bossPct').textContent  = pct + '% of this debt eliminated. Every sale helps.';
-  } catch(e) {}
-}
-loadBoss();
+<script>
+  const nav=document.getElementById('nav');
+  const onScroll=()=>{ nav.classList.toggle('scrolled', window.scrollY>60);
+    const y=window.scrollY;
+    document.querySelectorAll('.hero .layer').forEach(l=>{
+      const d=parseFloat(l.dataset.depth||0);
+      l.style.transform='translateY('+(y*d/100)+'px)';
+    });
+  };
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16});
+  document.querySelectorAll('.reveal').forEach((el)=>io.observe(el));
+
+  var navToggle=document.getElementById("navToggle"), navLinks=document.getElementById("navLinks");
+  if(navToggle&&navLinks){
+    navToggle.addEventListener("click",function(){var o=navLinks.classList.toggle("open");navToggle.setAttribute("aria-expanded",o?"true":"false");});
+    navLinks.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){navLinks.classList.remove("open");navToggle.setAttribute("aria-expanded","false");});});
+  }
+
+  window.addEventListener('pageshow',e=>{if(e.persisted)location.reload();});
 </script>
 </body>
 </html>
