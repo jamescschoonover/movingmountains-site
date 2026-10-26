@@ -1,2 +1,7 @@
 _dev-index.html
 _EDITS.md
+
+# Full-res shop photos: hard links to vendoo-tool data/photos_canonical (bq_1792986784756_5c36,
+# James 2026-10-25). Untracked on purpose -- wrangler deploys the working tree (it ignores .gitignore),
+# git history no longer carries ~20 GB of photo copies.
+shop/img/
